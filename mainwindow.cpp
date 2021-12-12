@@ -49,9 +49,19 @@ void MainWindow::pointsCallback(const geometry_msgs::Polygon& msg){
   std::cout << "size:" << msg.points.size() << std::endl;
   for (int i=0;i<msg.points.size();i++)
   {
+    float x = msg.points[i].x;
+    float y = msg.points[i].y;
+
     std::cout << "point " << i << " x: ";
-    std::cout << msg.points[i].x << " y: ";
-    std::cout << msg.points[i].y << std::endl;
+    std::cout << x << " y: ";
+    std::cout << y << std::endl;
+
+    QTableWidgetItem *newItemX = new QTableWidgetItem(tr("%1").arg(x));
+    QTableWidgetItem *newItemY = new QTableWidgetItem(tr("%1").arg(y));
+
+    ui->tableWidget->setItem(i,0,newItemX);
+    ui->tableWidget->setItem(i,1,newItemY);
+
   }
 
   //float f = msg.points[8].x;
