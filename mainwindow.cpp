@@ -22,12 +22,19 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::pointsCallback(const geometry_msgs::Polygon& msg){
-  float f = msg.points[8].x;
-  auto ps = msg.points;
 
-  QString s = QString::number(f, 'f', 8);
+  detect_points_ = msg;
+  ROS_INFO("detect_points callback !\n");
+  std::cout << "size:" << msg.points.size() << std::endl;
+  for (int i=0;i<msg.points.size();i++)
+  {
+    std::cout << "point " << i << " x: ";
+    std::cout << msg.points[i].x << " y: ";
+    std::cout << msg.points[i].y << std::endl;
+  }
+
+  //float f = msg.points[8].x;
+  //QString s = QString::number(f, 'f', 8);
   //QString text = QString::fromStdString(msg.points);
-  ui->label->setText(s);
-  ROS_INFO("sub");
-  std::cout << sizeof(ps)/sizeof(ps[0]) << std::endl;
+  //ui->label->setText(s);
 }

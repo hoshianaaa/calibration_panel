@@ -5,6 +5,8 @@
 
 #include <ros/ros.h>
 #include <geometry_msgs/Polygon.h>
+#include <geometry_msgs/Point32.h>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,5 +25,7 @@ private:
     ros::NodeHandle nh_;
     ros::Subscriber points_sub_;
     void pointsCallback(const geometry_msgs::Polygon& msg);
+    geometry_msgs::Polygon detect_points_;
+
 };
 #endif // MAINWINDOW_H
