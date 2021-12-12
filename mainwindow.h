@@ -21,7 +21,7 @@ public:
 private:
     Ui::MainWindow *ui;
     ros::NodeHandle nh_;
-    ros::Subscriber string_sub_;
-    void stringCallback(const geometry_msgs::Polygon& msg);
+    ros::Subscriber points_sub_;
+    void pointsCallback(const geometry_msgs::Polygon& msg);
 };
 #endif // MAINWINDOW_H

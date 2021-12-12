@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
     ui->label->setText("Hello World!");
-    string_sub_ = nh_.subscribe("chatter", 10, &MainWindow::stringCallback, this);
+    points_sub_ = nh_.subscribe("checker_detector/detect_points", 10, &MainWindow::pointsCallback, this);
     printf("register\n");
 }
 
@@ -21,8 +21,10 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::stringCallback(const geometry_msgs::Polygon& string_msg){
-  //QString text = QString::fromStdString(string_msg);
-  //ui->label->setText(text);
+void MainWindow::pointsCallback(const geometry_msgs::Polygon& msg){
+  float f = msg.points[0].x;
+  QString s = QString::number(f, 'f', 8);
+  //QString text = QString::fromStdString(msg.points);
+  ui->label->setText(s);
   //ROS_INFO("sub: %s", string_msg.data.c_str());
 }
