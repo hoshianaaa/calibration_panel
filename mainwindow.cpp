@@ -13,25 +13,15 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
 
-    btn1 = new QPushButton("Get pos", this);
-    btn2 = new QPushButton("Get pos", this);
-    btn3 = new QPushButton("Get pos", this);
-    btn4 = new QPushButton("Get pos", this);
-    btn5 = new QPushButton("Get pos", this);
-    btn6 = new QPushButton("Get pos", this);
-    btn7 = new QPushButton("Get pos", this);
-    btn8 = new QPushButton("Get pos", this);
-    btn9 = new QPushButton("Get pos", this);
-
-    ui->tableWidget->setCellWidget(0,4,btn1);
-    ui->tableWidget->setCellWidget(1,4,btn2);
-    ui->tableWidget->setCellWidget(2,4,btn3);
-    ui->tableWidget->setCellWidget(3,4,btn4);
-    ui->tableWidget->setCellWidget(4,4,btn5);
-    ui->tableWidget->setCellWidget(5,4,btn6);
-    ui->tableWidget->setCellWidget(6,4,btn7);
-    ui->tableWidget->setCellWidget(7,4,btn8);
-    ui->tableWidget->setCellWidget(8,4,btn9);
+    ui->tableWidget->setCellWidget(0,4,ui->btn1);
+    ui->tableWidget->setCellWidget(1,4,ui->btn2);
+    ui->tableWidget->setCellWidget(2,4,ui->btn3);
+    ui->tableWidget->setCellWidget(3,4,ui->btn4);
+    ui->tableWidget->setCellWidget(4,4,ui->btn5);
+    ui->tableWidget->setCellWidget(5,4,ui->btn6);
+    ui->tableWidget->setCellWidget(6,4,ui->btn7);
+    ui->tableWidget->setCellWidget(7,4,ui->btn8);
+    ui->tableWidget->setCellWidget(8,4,ui->btn9);
 
     points_sub_ = nh_.subscribe("checker_detector/detect_points", 10, &MainWindow::pointsCallback, this);
     pose_sub_ = nh_.subscribe("/robot_motion_server/pose", 10, &MainWindow::poseCallback, this);
@@ -76,4 +66,91 @@ void MainWindow::pointsCallback(const geometry_msgs::Polygon& msg){
 void MainWindow::poseCallback(const vision_ros_msgs::RobotPose& msg){
     ROS_INFO("robot pose callback !\n");
     robot_pose_ = msg;
+}
+
+void MainWindow::on_pushButton_released()
+{
+    QTableWidgetItem *newItem = new QTableWidgetItem(tr("%1").arg(robot_pose_.x));
+    ui->tableWidget->setItem(0,3,newItem);
+}
+
+void MainWindow::on_btn1_released()
+{
+    QTableWidgetItem *newItemX = new QTableWidgetItem(tr("%1").arg(robot_pose_.x));
+    ui->tableWidget->setItem(0,2,newItemX);
+
+    QTableWidgetItem *newItemY = new QTableWidgetItem(tr("%1").arg(robot_pose_.y));
+    ui->tableWidget->setItem(0,3,newItemY);
+}
+
+void MainWindow::on_btn2_released()
+{
+    QTableWidgetItem *newItemX = new QTableWidgetItem(tr("%1").arg(robot_pose_.x));
+    ui->tableWidget->setItem(1,2,newItemX);
+
+    QTableWidgetItem *newItemY = new QTableWidgetItem(tr("%1").arg(robot_pose_.y));
+    ui->tableWidget->setItem(1,3,newItemY);
+}
+
+void MainWindow::on_btn3_released()
+{
+    QTableWidgetItem *newItemX = new QTableWidgetItem(tr("%1").arg(robot_pose_.x));
+    ui->tableWidget->setItem(2,2,newItemX);
+
+    QTableWidgetItem *newItemY = new QTableWidgetItem(tr("%1").arg(robot_pose_.y));
+    ui->tableWidget->setItem(2,3,newItemY);
+}
+
+void MainWindow::on_btn4_released()
+{
+    QTableWidgetItem *newItemX = new QTableWidgetItem(tr("%1").arg(robot_pose_.x));
+    ui->tableWidget->setItem(3,2,newItemX);
+
+    QTableWidgetItem *newItemY = new QTableWidgetItem(tr("%1").arg(robot_pose_.y));
+    ui->tableWidget->setItem(3,3,newItemY);
+}
+
+void MainWindow::on_btn5_released()
+{
+    QTableWidgetItem *newItemX = new QTableWidgetItem(tr("%1").arg(robot_pose_.x));
+    ui->tableWidget->setItem(4,2,newItemX);
+
+    QTableWidgetItem *newItemY = new QTableWidgetItem(tr("%1").arg(robot_pose_.y));
+    ui->tableWidget->setItem(4,3,newItemY);
+}
+
+void MainWindow::on_btn6_released()
+{
+    QTableWidgetItem *newItemX = new QTableWidgetItem(tr("%1").arg(robot_pose_.x));
+    ui->tableWidget->setItem(5,2,newItemX);
+
+    QTableWidgetItem *newItemY = new QTableWidgetItem(tr("%1").arg(robot_pose_.y));
+    ui->tableWidget->setItem(5,3,newItemY);
+}
+
+void MainWindow::on_btn7_released()
+{
+    QTableWidgetItem *newItemX = new QTableWidgetItem(tr("%1").arg(robot_pose_.x));
+    ui->tableWidget->setItem(6,2,newItemX);
+
+    QTableWidgetItem *newItemY = new QTableWidgetItem(tr("%1").arg(robot_pose_.y));
+    ui->tableWidget->setItem(6,3,newItemY);
+}
+
+void MainWindow::on_btn8_released()
+{
+    QTableWidgetItem *newItemX = new QTableWidgetItem(tr("%1").arg(robot_pose_.x));
+    ui->tableWidget->setItem(7,2,newItemX);
+
+    QTableWidgetItem *newItemY = new QTableWidgetItem(tr("%1").arg(robot_pose_.y));
+    ui->tableWidget->setItem(7,3,newItemY);
+}
+
+void MainWindow::on_btn9_released()
+{
+    QTableWidgetItem *newItemX = new QTableWidgetItem(tr("%1").arg(robot_pose_.x));
+    ui->tableWidget->setItem(8,2,newItemX);
+
+    QTableWidgetItem *newItemY = new QTableWidgetItem(tr("%1").arg(robot_pose_.y));
+    ui->tableWidget->setItem(8,3,newItemY);
 }

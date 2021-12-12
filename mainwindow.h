@@ -21,6 +21,18 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_pushButton_released();
+    void on_btn1_released();
+    void on_btn2_released();
+    void on_btn3_released();
+    void on_btn4_released();
+    void on_btn5_released();
+    void on_btn6_released();
+    void on_btn7_released();
+    void on_btn8_released();
+    void on_btn9_released();
+
 private:
     Ui::MainWindow *ui;
     ros::NodeHandle nh_;
@@ -29,7 +41,6 @@ private:
     void poseCallback(const vision_ros_msgs::RobotPose& msg);
     geometry_msgs::Polygon detect_points_;
     vision_ros_msgs::RobotPose robot_pose_;
-    QPushButton *btn1,*btn2,*btn3,*btn4,*btn5,*btn6,*btn7,*btn8,*btn9;
 
 };
 #endif // MAINWINDOW_H
