@@ -6,231 +6,219 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>659</width>
+    <height>530</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>521</width>
-      <height>341</height>
-     </rect>
-    </property>
-    <row>
-     <property name="text">
-      <string>0</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>1</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>2</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>3</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>4</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>5</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>6</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>7</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>8</string>
-     </property>
-    </row>
-    <column>
-     <property name="text">
-      <string>Cmaera X</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Camera Y</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Robot X</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Robot Y</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string> </string>
-     </property>
-    </column>
-   </widget>
-   <widget class="QPushButton" name="CalibrationButton">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>360</y>
-      <width>161</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Calibration</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_1">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>30</y>
-      <width>89</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>60</y>
-      <width>89</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>90</y>
-      <width>89</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_4">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>120</y>
-      <width>89</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_5">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>150</y>
-      <width>89</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_6">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>180</y>
-      <width>89</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_7">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>210</y>
-      <width>89</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_8">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>240</y>
-      <width>89</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_9">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>270</y>
-      <width>89</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QTableWidget" name="tableWidget">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContents</enum>
+            </property>
+            <row>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>1</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>2</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>3</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>4</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>5</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>6</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>7</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>8</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>Cmaera X</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Camera Y</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Robot X</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Robot Y</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string> </string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>150</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Calibration</string>
+              </property>
+              <property name="autoRepeat">
+               <bool>false</bool>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>659</width>
      <height>28</height>
     </rect>
    </property>

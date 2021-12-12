@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QPushButton>
 
 #include <ros/ros.h>
 #include <geometry_msgs/Polygon.h>
@@ -26,6 +27,7 @@ private:
     ros::Subscriber points_sub_;
     void pointsCallback(const geometry_msgs::Polygon& msg);
     geometry_msgs::Polygon detect_points_;
+    QPushButton *btn1,*btn2,*btn3,*btn4,*btn5,*btn6,*btn7,*btn8,*btn9;
 
 };
 #endif // MAINWINDOW_H
