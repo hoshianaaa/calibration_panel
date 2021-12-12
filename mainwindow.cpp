@@ -34,6 +34,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tableWidget->setCellWidget(8,4,btn9);
 
     points_sub_ = nh_.subscribe("checker_detector/detect_points", 10, &MainWindow::pointsCallback, this);
+    pose_sub_ = nh_.subscribe("/robot_motion_server/pose", 10, &MainWindow::poseCallback, this);
+
     printf("register\n");
 }
 
@@ -64,8 +66,14 @@ void MainWindow::pointsCallback(const geometry_msgs::Polygon& msg){
 
   }
 
+
   //float f = msg.points[8].x;
   //QString s = QString::number(f, 'f', 8);
   //QString text = QString::fromStdString(msg.points);
   //ui->label->setText(s);
+}
+
+void MainWindow::poseCallback(const vision_ros_msgs::RobotPose& msg){
+    ROS_INFO("robot pose callback !\n");
+    robot_pose_ = msg;
 }

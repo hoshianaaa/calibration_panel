@@ -26,10 +26,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 find_package(roscpp)
-
+find_package(vision_ros_msgs)
 
 include_directories(
  ${roscpp_INCLUDE_DIRS}
+ ${vision_ros_msgs_INCLUDE_DIRS}
 )
 
 if(ANDROID)
