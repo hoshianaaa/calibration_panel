@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 
+#include <ros/ros.h>
+#include <geometry_msgs/Polygon.h>
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -17,5 +20,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    ros::NodeHandle nh_;
+    ros::Subscriber string_sub_;
+    void stringCallback(const geometry_msgs::Polygon& msg);
 };
 #endif // MAINWINDOW_H

@@ -9,10 +9,14 @@ int main(int argc, char *argv[])
 
     ros::init(argc, argv, "aaa");
 
-    ros::NodeHandle nh = ros::NodeHandle();
-
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
-    return a.exec();
+
+    ros::Rate loop_rate(20);
+    while (ros::ok()){
+      ros::spinOnce();
+      a.processEvents();
+      loop_rate.sleep();
+    }
 }
